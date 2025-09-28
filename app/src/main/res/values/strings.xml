@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">2SOOK</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_logo">Logo</string>
+</resources>

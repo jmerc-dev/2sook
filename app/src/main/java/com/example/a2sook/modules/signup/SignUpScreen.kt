@@ -47,7 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 
 @Composable
-fun SignUpScreen(onBackClick: () -> Unit, modifier: Modifier) {
+fun SignUpScreen(onBackClick: () -> Unit, modifier: Modifier, onSignUpClick: (role: String) -> Unit) {
 
     var selectedRole by remember { mutableStateOf("Customer") }
 
@@ -175,7 +175,9 @@ fun SignUpScreen(onBackClick: () -> Unit, modifier: Modifier) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Button(
-                onClick = { /* TODO: handle login here */ },
+                onClick = {
+                    onSignUpClick(selectedRole)
+                },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.primary
                 ),
@@ -192,6 +194,8 @@ fun SignUpScreen(onBackClick: () -> Unit, modifier: Modifier) {
                     color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.clickable { onBackClick() })
             }
+
+
         }
     }
 }
